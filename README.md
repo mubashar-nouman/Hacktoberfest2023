@@ -9,5 +9,4 @@ JavaScript
 Python
 Java
 C++
-Sorting Algorithms
 Shell
