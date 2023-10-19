@@ -1,0 +1,24 @@
+def fibonacci(n):
+    fib_sequence = []
+    a, b = 0, 1
+    
+    if n <= 0:
+        return "Invalid input. Please enter a positive integer."
+    elif n == 1:
+        return [a]
+    elif n == 2:
+        return [a, b]
+    
+    fib_sequence.extend([a, b])
+    
+    for _ in range(2, n):
+        next_num = a + b
+        fib_sequence.append(next_num)
+        a, b = b, next_num
+    
+    return fib_sequence
+
+# Example usage
+n = 10  # Change this value to find the first n Fibonacci numbers
+result = fibonacci(n)
+print(f"The first {n} terms of the Fibonacci sequence are: {result}")
